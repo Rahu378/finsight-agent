@@ -1,0 +1,36 @@
+# FinSight AI Agent — Python dependencies
+# Pinned for reproducible builds in regulated environments
+
+# LLM orchestration
+langgraph==0.2.56
+langchain==0.3.15
+langchain-core==0.3.31
+langchain-aws==0.2.9
+langchain-community==0.3.15
+
+# AWS
+boto3==1.35.98
+botocore==1.35.98
+
+# API
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-multipart==0.0.20
+
+# Data validation
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
+# Logging
+structlog==24.4.0
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+httpx==0.28.1   # for FastAPI TestClient async support
+
+# Dev tools
+python-dotenv==1.0.1
+ruff==0.8.4       # linting + formatting (replaces flake8 + black)
+mypy==1.14.0      # type checking
