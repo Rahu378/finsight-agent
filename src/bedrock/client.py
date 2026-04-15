@@ -201,4 +201,4 @@ class BedrockClient:
         """
         for chunk in self._llm.stream(messages):
             if hasattr(chunk, "content") and chunk.content:
-                yield chunk.content
+                yield str(chunk.content)

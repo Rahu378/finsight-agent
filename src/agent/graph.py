@@ -46,7 +46,7 @@ from src.utils.logger import get_logger
 logger = get_logger(__name__)
 
 
-def build_graph() -> StateGraph:
+def build_graph():
     """
     Construct and compile the FinSight agent graph.
 
@@ -128,7 +128,7 @@ async def run_agent(query: str, account_id: str | None = None, thread_id: str = 
 
     logger.info("agent invocation started", account_id=account_id, thread_id=thread_id)
 
-    final_state = await agent_graph.ainvoke(initial_state, config=config)
+    final_state = await agent_graph.ainvoke(initial_state.model_dump(), config=config)
 
     logger.info(
         "agent invocation complete",

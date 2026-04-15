@@ -83,7 +83,7 @@ Respond with this exact JSON structure:
 
     try:
         # Strip markdown fences if Claude wraps in ```json
-        clean = re.sub(r"```(?:json)?|```", "", content).strip()
+        clean = re.sub(r"```(?:json)?|```", "", str(content)).strip()
         parsed = json.loads(clean)
         intent = parsed.get("intent", "full_investigation")
         tools_needed = parsed.get("tools_needed", ["transaction_analyzer", "risk_scorer"])
@@ -279,7 +279,7 @@ def guardrails_checker(state: AgentState) -> dict[str, Any]:
             flags.append(message)
 
     # Ensure high-risk responses include human review language
-    risk_data = state.risk_assessment or {}
+    risk_data = state.risk_assessment.model_dump() if state.risk_assessment else {}
     if isinstance(risk_data, dict):
         risk_level = risk_data.get("overall_risk", "low")
     else:
