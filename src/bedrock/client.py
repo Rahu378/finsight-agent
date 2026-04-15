@@ -19,11 +19,9 @@ from __future__ import annotations
 import time
 from typing import Iterator
 
-import boto3
 from botocore.exceptions import ClientError
 from langchain_aws import ChatBedrockConverse
 from langchain_core.messages import BaseMessage
-from langchain_core.outputs import ChatGeneration
 
 from src.utils.logger import get_logger
 

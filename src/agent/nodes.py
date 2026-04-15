@@ -20,7 +20,7 @@ from typing import Any
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 from src.agent.state import AgentState
-from src.agent.tools import TOOL_MAP, compliance_screener
+from src.agent.tools import TOOL_MAP
 from src.bedrock.client import BedrockClient
 from src.utils.logger import get_logger
 
