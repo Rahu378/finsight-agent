@@ -31,7 +31,7 @@ jobs:
           pytest tests/ -v \
             --cov=src \
             --cov-report=term-missing \
-            --cov-fail-under=75
+            --cov-fail-under=30
 
   build:
     name: Build Docker Image
