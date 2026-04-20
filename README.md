@@ -1,4 +1,4 @@
-# FinSight AI Agent 🏦
+# FinSight AI Agent  🏦
 
 > A production-grade financial intelligence agent built with **LangGraph** + **AWS Bedrock (Claude)** — designed for regulated fintech environments.
 
